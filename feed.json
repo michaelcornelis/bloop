@@ -1,0 +1,31 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Bloop",
+    "description": "",
+    "home_page_url": "https://bloop.be",
+    "feed_url": "https://bloop.be/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Mike"
+    },
+    "items": [
+        {
+            "id": "https://bloop.be/config-cisco-aironet-cisco-aironet-160226023602-2-ssid.html",
+            "url": "https://bloop.be/config-cisco-aironet-cisco-aironet-160226023602-2-ssid.html",
+            "title": "Config Cisco Aironet Cisco Aironet 1602/2602/3602 2 SSID",
+            "summary": "Je fais ce post pour classer cette config d'AP cisco voici la source initiale ! logging rate-limit console 9 ! aaa new-model ! ! aaa authentication login default local aaa authorization exec default local ! aaa session-id common no ip routing no ip cef ip&hellip;",
+            "content_html": "<p>Je fais ce post pour classer cette config d'AP cisco</p>\n<p>voici la <a href=\"https://zonesadmin.wordpress.com/2013/12/13/cisco-aironet-160226023602-dual-ssid-config/\">source initiale</a></p>\n<p><code></code></p>\n<pre>!\n logging rate-limit console 9\n !\n aaa new-model\n !\n !\n aaa authentication login default local\n aaa authorization exec default local\n !\n aaa session-id common\n no ip routing\n no ip cef\n ip domain name <em>domain.corp</em>\n !\n !\n !\n !\n dot11 syslog\n !\n dot11 ssid <em>corp</em>\n vlan 11\n authentication open\n authentication key-management wpa version 2\n mbssid guest-mode\n wpa-psk ascii <em>Welcome1</em>\n !\n dot11 ssid guest\n vlan <em>21</em>\n authentication open\n authentication key-management wpa version 2\n guest-mode\n mbssid guest-mode\n wpa-psk ascii <em>Welcome1</em>\n !\n !\n dot11 guest\n !\n !\n !\n !\n !\n bridge irb\n !\n !\n !\n interface Dot11Radio0\n no ip address\n no ip route-cache\n !\n encryption <em>vlan 11</em> mode ciphers aes-ccm tkip\n !\n encryption <em>vlan 21</em> mode ciphers aes-ccm tkip\n !\n ssid <em>corp</em>\n !\n ssid <em>guest</em>\n !\n antenna gain 0\n mbssid\n station-role root\n !\n interface Dot11Radio0.11\n encapsulation dot1Q 11 native\n no ip route-cache\n bridge-group 1+\n bridge-group 1 subscriber-loop-control\n bridge-group 1 spanning-disabled\n bridge-group 1 block-unknown-source\n no bridge-group 1 source-learning\n no bridge-group 1 unicast-flooding\n !\n interface Dot11Radio0.<em>21</em>\n encapsulation dot1Q 21\n no ip route-cache\n bridge-group 21\n bridge-group 21 subscriber-loop-control\n bridge-group 21 spanning-disabled\n bridge-group 21 block-unknown-source\n no bridge-group 21 source-learning\n no bridge-group 21 unicast-flooding\n !\n interface Dot11Radio1\n no ip address\n no ip route-cache\n !\n encryption vlan 11 mode ciphers aes-ccm tkip\n !\n encryption vlan 21 mode ciphers aes-ccm tkip\n !\n ssid <em>corp</em>\n !\n ssid <em>guest</em>\n !\n antenna gain 0\n peakdetect\n dfs band 3 block\n stbc\n beamform ofdm\n mbssid\n channel dfs\n station-role root\n !\n interface Dot11Radio1.11\n encapsulation dot1Q 11 native\n no ip route-cache\n bridge-group 1\n bridge-group 1 subscriber-loop-control\n bridge-group 1 spanning-disabled\n bridge-group 1 block-unknown-source\n no bridge-group 1 source-learning\n no bridge-group 1 unicast-flooding\n !\n interface Dot11Radio1.21\n encapsulation dot1Q 21\n no ip route-cache\n bridge-group 21\n bridge-group 21 subscriber-loop-control\n bridge-group 21 spanning-disabled\n bridge-group 21 block-unknown-source\n no bridge-group 21 source-learning\n no bridge-group 21 unicast-flooding\n !\n interface GigabitEthernet0\n no ip address\n no ip route-cache\n duplex auto\n speed auto\n !\n interface GigabitEthernet0.11\n encapsulation dot1Q 11\n no ip route-cache\n bridge-group 1\n bridge-group 1 spanning-disabled\n no bridge-group 1 source-learning\n !\n interface GigabitEthernet0.21\n encapsulation dot1Q 21\n no ip route-cache\n no ip route-cache\n bridge-group 21\n no bridge-group 21 source-learning\n bridge-group 21 spanning-disabled\n !\n interface BVI1\n ip address <em>10.10.100.240 255.255.255.0</em>\n no ip route-cache\n !\n ip default-gateway <em>10.10.100.250</em>\n ip forward-protocol nd\n ip http server\n ip http authentication aaa\n no ip http secure-server\n ip http help-path http://www.cisco.com/warp/public/779/smbiz/prodconfig/help/eag\n !\n !\n !\n bridge 1 route ip\n !\n !\n !\n line con 0\n line vty 0 4\n transport input all\n !\n hostname <em>company-location-wap01</em>\n crypto key generate rsa modulus 2048\n end</pre>\n<p><code></code></p>",
+            "author": {
+                "name": "Mike"
+            },
+            "tags": [
+                   "network",
+                   "cisco",
+                   "autonomous wap",
+                   "aironet"
+            ],
+            "date_published": "2022-01-21T12:17:46+01:00",
+            "date_modified": "2022-01-21T12:17:46+01:00"
+        }
+    ]
+}

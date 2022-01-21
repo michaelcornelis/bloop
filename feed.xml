@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Bloop</title>
+    <link href="https://bloop.be/feed.xml" rel="self" />
+    <link href="https://bloop.be" />
+    <updated>2022-01-21T12:17:46+01:00</updated>
+    <author>
+        <name>Mike</name>
+    </author>
+    <id>https://bloop.be</id>
+
+    <entry>
+        <title>Config Cisco Aironet Cisco Aironet 1602/2602/3602 2 SSID</title>
+        <author>
+            <name>Mike</name>
+        </author>
+        <link href="https://bloop.be/config-cisco-aironet-cisco-aironet-160226023602-2-ssid.html"/>
+        <id>https://bloop.be/config-cisco-aironet-cisco-aironet-160226023602-2-ssid.html</id>
+            <category term="network"/>
+            <category term="cisco"/>
+            <category term="autonomous wap"/>
+            <category term="aironet"/>
+
+        <updated>2022-01-21T12:17:46+01:00</updated>
+            <summary>
+                <![CDATA[
+                    Je fais ce post pour classer cette config d'AP cisco voici la source initiale ! logging rate-limit console 9 ! aaa new-model ! ! aaa authentication login default local aaa authorization exec default local ! aaa session-id common no ip routing no ip cef ip&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Je fais ce post pour classer cette config d'AP cisco</p>
+<p>voici la <a href="https://zonesadmin.wordpress.com/2013/12/13/cisco-aironet-160226023602-dual-ssid-config/">source initiale</a></p>
+<p><code></code></p>
+<pre>!
+ logging rate-limit console 9
+ !
+ aaa new-model
+ !
+ !
+ aaa authentication login default local
+ aaa authorization exec default local
+ !
+ aaa session-id common
+ no ip routing
+ no ip cef
+ ip domain name <em>domain.corp</em>
+ !
+ !
+ !
+ !
+ dot11 syslog
+ !
+ dot11 ssid <em>corp</em>
+ vlan 11
+ authentication open
+ authentication key-management wpa version 2
+ mbssid guest-mode
+ wpa-psk ascii <em>Welcome1</em>
+ !
+ dot11 ssid guest
+ vlan <em>21</em>
+ authentication open
+ authentication key-management wpa version 2
+ guest-mode
+ mbssid guest-mode
+ wpa-psk ascii <em>Welcome1</em>
+ !
+ !
+ dot11 guest
+ !
+ !
+ !
+ !
+ !
+ bridge irb
+ !
+ !
+ !
+ interface Dot11Radio0
+ no ip address
+ no ip route-cache
+ !
+ encryption <em>vlan 11</em> mode ciphers aes-ccm tkip
+ !
+ encryption <em>vlan 21</em> mode ciphers aes-ccm tkip
+ !
+ ssid <em>corp</em>
+ !
+ ssid <em>guest</em>
+ !
+ antenna gain 0
+ mbssid
+ station-role root
+ !
+ interface Dot11Radio0.11
+ encapsulation dot1Q 11 native
+ no ip route-cache
+ bridge-group 1+
+ bridge-group 1 subscriber-loop-control
+ bridge-group 1 spanning-disabled
+ bridge-group 1 block-unknown-source
+ no bridge-group 1 source-learning
+ no bridge-group 1 unicast-flooding
+ !
+ interface Dot11Radio0.<em>21</em>
+ encapsulation dot1Q 21
+ no ip route-cache
+ bridge-group 21
+ bridge-group 21 subscriber-loop-control
+ bridge-group 21 spanning-disabled
+ bridge-group 21 block-unknown-source
+ no bridge-group 21 source-learning
+ no bridge-group 21 unicast-flooding
+ !
+ interface Dot11Radio1
+ no ip address
+ no ip route-cache
+ !
+ encryption vlan 11 mode ciphers aes-ccm tkip
+ !
+ encryption vlan 21 mode ciphers aes-ccm tkip
+ !
+ ssid <em>corp</em>
+ !
+ ssid <em>guest</em>
+ !
+ antenna gain 0
+ peakdetect
+ dfs band 3 block
+ stbc
+ beamform ofdm
+ mbssid
+ channel dfs
+ station-role root
+ !
+ interface Dot11Radio1.11
+ encapsulation dot1Q 11 native
+ no ip route-cache
+ bridge-group 1
+ bridge-group 1 subscriber-loop-control
+ bridge-group 1 spanning-disabled
+ bridge-group 1 block-unknown-source
+ no bridge-group 1 source-learning
+ no bridge-group 1 unicast-flooding
+ !
+ interface Dot11Radio1.21
+ encapsulation dot1Q 21
+ no ip route-cache
+ bridge-group 21
+ bridge-group 21 subscriber-loop-control
+ bridge-group 21 spanning-disabled
+ bridge-group 21 block-unknown-source
+ no bridge-group 21 source-learning
+ no bridge-group 21 unicast-flooding
+ !
+ interface GigabitEthernet0
+ no ip address
+ no ip route-cache
+ duplex auto
+ speed auto
+ !
+ interface GigabitEthernet0.11
+ encapsulation dot1Q 11
+ no ip route-cache
+ bridge-group 1
+ bridge-group 1 spanning-disabled
+ no bridge-group 1 source-learning
+ !
+ interface GigabitEthernet0.21
+ encapsulation dot1Q 21
+ no ip route-cache
+ no ip route-cache
+ bridge-group 21
+ no bridge-group 21 source-learning
+ bridge-group 21 spanning-disabled
+ !
+ interface BVI1
+ ip address <em>10.10.100.240 255.255.255.0</em>
+ no ip route-cache
+ !
+ ip default-gateway <em>10.10.100.250</em>
+ ip forward-protocol nd
+ ip http server
+ ip http authentication aaa
+ no ip http secure-server
+ ip http help-path http://www.cisco.com/warp/public/779/smbiz/prodconfig/help/eag
+ !
+ !
+ !
+ bridge 1 route ip
+ !
+ !
+ !
+ line con 0
+ line vty 0 4
+ transport input all
+ !
+ hostname <em>company-location-wap01</em>
+ crypto key generate rsa modulus 2048
+ end</pre>
+<p><code></code></p>
+            ]]>
+        </content>
+    </entry>
+</feed>

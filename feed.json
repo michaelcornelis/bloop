@@ -10,6 +10,62 @@
     },
     "items": [
         {
+            "id": "https://bloop.be/fash-autonomous-firmware-2602.html",
+            "url": "https://bloop.be/fash-autonomous-firmware-2602.html",
+            "title": "Fash autonomous firmware 2602",
+            "summary": "set IP_ADDR 10.0.0.5 set NETMASK 255.255.255.0 #ENABLE_BREAK=YES #format flash: tftp_init ether_init flash_init tar -xtract tftp://10.0.0.2/ap3g2-k9w7-tar.default flash: set BOOT flash:/ap3g2-k9w7-mx.153-3.JF15/ap3g2-k9w7-mx.153-3.JF15 load boot",
+            "content_html": "<p><code>set IP_ADDR 10.0.0.5<br>set NETMASK 255.255.255.0<br>#ENABLE_BREAK=YES<br>#format flash:<br>tftp_init<br>ether_init<br>flash_init<br>tar -xtract tftp://10.0.0.2/ap3g2-k9w7-tar.default flash:<br>set BOOT flash:/ap3g2-k9w7-mx.153-3.JF15/ap3g2-k9w7-mx.153-3.JF15<br>load<br>boot</code></p>",
+            "author": {
+                "name": "Mike"
+            },
+            "tags": [
+            ],
+            "date_published": "2022-01-26T17:04:34+01:00",
+            "date_modified": "2022-01-26T17:04:34+01:00"
+        },
+        {
+            "id": "https://bloop.be/how-to-erase-aironet-conf.html",
+            "url": "https://bloop.be/how-to-erase-aironet-conf.html",
+            "title": "how to erase aironet conf",
+            "summary": "commande: wr erase",
+            "content_html": "<p>commande:</p>\n<p>wr erase</p>",
+            "author": {
+                "name": "Mike"
+            },
+            "tags": [
+            ],
+            "date_published": "2022-01-26T15:25:42+01:00",
+            "date_modified": "2022-01-26T15:25:42+01:00"
+        },
+        {
+            "id": "https://bloop.be/reset-password.html",
+            "url": "https://bloop.be/reset-password.html",
+            "title": "reset password",
+            "summary": "Password Recovery Procedure for the Cisco AIR-CAP2602I-E-K9 Jump to navigationJump to search Step 1: Hold the mode Button down for approximately 20 seconds while powering up the access point. The Indicator LED should end to be blinking in red Step 2: Issue the ether_init command: ap: ether_init Initializing&hellip;",
+            "content_html": "<h1 id=\"firstHeading\" class=\"firstHeading\" lang=\"en\">Password Recovery Procedure for the Cisco AIR-CAP2602I-E-K9</h1>\n<div id=\"bodyContent\" class=\"mw-body-content\">\n<div id=\"contentSub\" dir=\"ltr\" lang=\"en\"> </div>\n<div id=\"jump-to-nav\"> </div>\n<a href=\"https://wiki.nesevo.com/index.php/Password_Recovery_Procedure_for_the_Cisco_AIR-CAP2602I-E-K9#column-one\" class=\"mw-jump-link\">Jump to navigation</a><a href=\"https://wiki.nesevo.com/index.php/Password_Recovery_Procedure_for_the_Cisco_AIR-CAP2602I-E-K9#searchInput\" class=\"mw-jump-link\">Jump to search</a>\n<div id=\"mw-content-text\" class=\"mw-content-ltr\" dir=\"ltr\" lang=\"en\">\n<div class=\"mw-parser-output\">\n<p><strong>Step 1</strong>: Hold the mode Button down for approximately 20 seconds while powering up the access point. The Indicator LED should end to be <strong>blinking in red</strong><br><br><strong>Step 2</strong>: Issue the <strong><code>ether_init</code></strong> command:</p>\n<pre>ap: <strong>ether_init</strong>\nInitializing ethernet port 0...\nEthernet speed is 100 Mb - FULL Duplex\n</pre>\n<p><strong>Step 3</strong>: Issue the <strong><code>flash_init</code></strong> command and the <strong><code>load_helper</code></strong> command:</p>\n<p>If the Flash has already initialized, you see this:</p>\n<pre>ap: <strong>flash_init</strong>\nInitializing Flash...\n...The flash is already initialized.\nap:\n</pre>\n<p>If the Flash has not initialized, you see this:</p>\n<pre>ap: flash_init\nInitializing Flash...\nflashfs[0]: 21 files, 2 directories\nflashfs[0]: 0 orphaned files, 0 orphaned directories\nflashfs[0]: Total bytes: 7741440\nflashfs[0]: Bytes used: 4499456\nflashfs[0]: Bytes available: 3241984\nflashfs[0]: flashfs fsck took 7 seconds.\n...done initializing flash.\nBoot Sector Filesystem (bs:) installed, fsid: 3\nParameter Block Filesystem (pb:) installed, fsid: 4\n</pre>\n<p>Issue the <strong><code>load_helper</code></strong> command in order to load any boot helper images. Here is an example:</p>\n<pre>   ap: <strong>load_helper</strong>\n   ap:\n</pre>\n<p><br><strong>Step 4</strong>: Issue the <strong><code>reset</code></strong> command followed by an <strong><code>y</code></strong> to approve the reset.</p>\n<pre>ap: <strong>reset</strong>\nAre you sure you want to reset the system (y/n)?<strong>y</strong>\nSystem resetting...\n\nIOS Bootloader - Starting system.\nflash is writable\nFLASH CHIP:  Macronix Mirrorbit (00C2)\nXmodem file system is available. \n\n<i>...</i>\n\n</pre>\n<p><strong>Step 5</strong>: Let the machine normally boot up this time. The default username and password after a reset should be <strong><code>Cisco</code></strong><a rel=\"nofollow\" class=\"external autonumber\" href=\"https://www.cisco.com/c/en/us/support/docs/wireless/aironet-1200-series/9215-pwrec-2.html#resios\">[1]</a>:</p>\n<pre>User Access Verification\n\nUsername: <strong>Cisco</strong>\nPassword: <strong>Cisco</strong>\n\nAP<i>xxxx.xxxx.xxxx</i>&gt;</pre>\n</div>\n</div>\n</div>",
+            "author": {
+                "name": "Mike"
+            },
+            "tags": [
+            ],
+            "date_published": "2022-01-26T15:20:13+01:00",
+            "date_modified": "2022-01-26T15:20:13+01:00"
+        },
+        {
+            "id": "https://bloop.be/how-to-reset-aironet-admin-password.html",
+            "url": "https://bloop.be/how-to-reset-aironet-admin-password.html",
+            "title": "How to reset Aironet admin password",
+            "summary": "Cisco switch by default have no password. To set a password or change previous password follow the instructions below: For Example: You are all done! Source: https://tutorialbit.com/networking/cisco-packet-tracer/set-or-change-password-of-cisco-switch-in-cisco-packet-tracer/",
+            "content_html": "<p>Cisco switch by default have no password. To set a password or change previous password follow the instructions below:</p>\n<ol>\n<li>Click on the Switch. A popup window will be opened.</li>\n<li>Go to <strong>CLI</strong> tab in the popup window.</li>\n<li>Click in command box.</li>\n<li>Press “Enter”.</li>\n<li>To enable the switch give give following command:</li>\n</ol>\n<div class=\"wp-block-syntaxhighlighter-code \">\n<div>\n<div id=\"highlighter_899866\" class=\"syntaxhighlighter  plain\">\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td class=\"gutter\">\n<div class=\"line number1 index0 alt2\">1</div>\n</td>\n<td class=\"code\">\n<div class=\"container\">\n<div class=\"line number1 index0 alt2\"><code class=\"plain plain\">enable</code></div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n</div>\n<ol start=\"6\">\n<li>To enable configuration mode give following command:</li>\n</ol>\n<div class=\"wp-block-syntaxhighlighter-code \">\n<div>\n<div id=\"highlighter_818935\" class=\"syntaxhighlighter  plain\">\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td class=\"gutter\">\n<div class=\"line number1 index0 alt2\">1</div>\n</td>\n<td class=\"code\">\n<div class=\"container\">\n<div class=\"line number1 index0 alt2\"><code class=\"plain plain\">configure terminal</code></div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n</div>\n<ol start=\"7\">\n<li>To change or set a password give following command:</li>\n</ol>\n<div class=\"wp-block-syntaxhighlighter-code \">\n<div>\n<div id=\"highlighter_531836\" class=\"syntaxhighlighter  plain\">\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td class=\"gutter\">\n<div class=\"line number1 index0 alt2\">1</div>\n</td>\n<td class=\"code\">\n<div class=\"container\">\n<div class=\"line number1 index0 alt2\"><code class=\"plain plain\">enable password &lt;PASSWORD&gt;</code></div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n</div>\n<p>For Example:</p>\n<div class=\"wp-block-syntaxhighlighter-code \">\n<div>\n<div id=\"highlighter_555002\" class=\"syntaxhighlighter  plain\">\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td class=\"gutter\">\n<div class=\"line number1 index0 alt2\">1</div>\n</td>\n<td class=\"code\">\n<div class=\"container\">\n<div class=\"line number1 index0 alt2\"><code class=\"plain plain\">enable password Manik</code></div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n</div>\n<ol start=\"8\">\n<li>To save the configuration give following command:</li>\n</ol>\n<div class=\"wp-block-syntaxhighlighter-code \">\n<div>\n<div id=\"highlighter_121577\" class=\"syntaxhighlighter  plain\">\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td class=\"gutter\">\n<div class=\"line number1 index0 alt2\">1</div>\n</td>\n<td class=\"code\">\n<div class=\"container\">\n<div class=\"line number1 index0 alt2\"><code class=\"plain plain\">do write memory</code></div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n</div>\n<ol start=\"9\">\n<li>To exit the configuration mode give following command:</li>\n</ol>\n<div class=\"wp-block-syntaxhighlighter-code \">\n<div>\n<div id=\"highlighter_957559\" class=\"syntaxhighlighter  plain\">\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td class=\"gutter\">\n<div class=\"line number1 index0 alt2\">1</div>\n</td>\n<td class=\"code\">\n<div class=\"container\">\n<div class=\"line number1 index0 alt2\"><code class=\"plain plain\">exit</code></div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n</div>\n<ol start=\"10\">\n<li>To exit enable mode give following command:</li>\n</ol>\n<div class=\"wp-block-syntaxhighlighter-code \">\n<div>\n<div id=\"highlighter_815351\" class=\"syntaxhighlighter  plain\">\n<table border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\n<tbody>\n<tr>\n<td class=\"gutter\">\n<div class=\"line number1 index0 alt2\">1</div>\n</td>\n<td class=\"code\">\n<div class=\"container\">\n<div class=\"line number1 index0 alt2\"><code class=\"plain plain\">exit</code></div>\n</div>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</div>\n</div>\n<p class=\"has-green-color has-text-color\">You are all done!</p>\n<p> </p>\n<p>Source:  https://tutorialbit.com/networking/cisco-packet-tracer/set-or-change-password-of-cisco-switch-in-cisco-packet-tracer/</p>",
+            "author": {
+                "name": "Mike"
+            },
+            "tags": [
+            ],
+            "date_published": "2022-01-26T15:19:12+01:00",
+            "date_modified": "2022-01-26T15:19:12+01:00"
+        },
+        {
             "id": "https://bloop.be/reset-cisco-aironet-2602i.html",
             "url": "https://bloop.be/reset-cisco-aironet-2602i.html",
             "title": "Reset Cisco Aironet 2602i",

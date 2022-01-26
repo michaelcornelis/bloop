@@ -3,12 +3,44 @@
     <title>Bloop</title>
     <link href="https://bloop.be/feed.xml" rel="self" />
     <link href="https://bloop.be" />
-    <updated>2022-01-21T12:17:46+01:00</updated>
+    <updated>2022-01-26T09:45:16+01:00</updated>
     <author>
         <name>Mike</name>
     </author>
     <id>https://bloop.be</id>
 
+    <entry>
+        <title>Reset Cisco Aironet 2602i</title>
+        <author>
+            <name>Mike</name>
+        </author>
+        <link href="https://bloop.be/reset-cisco-aironet-2602i.html"/>
+        <id>https://bloop.be/reset-cisco-aironet-2602i.html</id>
+            <category term="network"/>
+            <category term="cisco"/>
+            <category term="autonomous wap"/>
+            <category term="aironet"/>
+
+        <updated>2022-01-26T09:45:16+01:00</updated>
+            <summary>
+                <![CDATA[
+                     Connect the console cable Unplug the power or network cable if connected to a POE switch Press and hold the Mode button Plug the power back into the AP Wait until the output on the console says button is pressed. Wait for button to be released… Once&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <ul>
+<li>Connect the console cable</li>
+<li>Unplug the power or network cable if connected to a POE switch</li>
+<li>Press and hold the <strong>Mode</strong> button</li>
+<li>Plug the power back into the AP</li>
+<li>Wait until the output on the console says <strong><em>button is pressed. Wait for button to be released…</em></strong></li>
+<li>Once that message is displayed release the button and allow the AP to boot</li>
+</ul>
+<figure class="post__image"><img loading="lazy"  src="https://bloop.be/media/posts/2/reset-aironet-2602.jpg" sizes="(max-width: 48em) 100vw, 768px" srcset="https://bloop.be/media/posts/2/responsive/reset-aironet-2602-xs.jpg 300w ,https://bloop.be/media/posts/2/responsive/reset-aironet-2602-sm.jpg 480w ,https://bloop.be/media/posts/2/responsive/reset-aironet-2602-md.jpg 768w ,https://bloop.be/media/posts/2/responsive/reset-aironet-2602-lg.jpg 1024w ,https://bloop.be/media/posts/2/responsive/reset-aironet-2602-xl.jpg 1360w ,https://bloop.be/media/posts/2/responsive/reset-aironet-2602-2xl.jpg 1600w"  alt="" width="973" height="364"></figure>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Config Cisco Aironet Cisco Aironet 1602/2602/3602 2 SSID</title>
         <author>

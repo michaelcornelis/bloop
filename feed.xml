@@ -3,7 +3,7 @@
     <title>Bloop</title>
     <link href="https://bloop.be/feed.xml" rel="self" />
     <link href="https://bloop.be" />
-    <updated>2022-01-27T10:42:53+01:00</updated>
+    <updated>2022-01-27T11:52:59+01:00</updated>
     <author>
         <name>Mike</name>
     </author>
@@ -37,10 +37,10 @@
         <link href="https://bloop.be/how-to-erase-aironet-conf.html"/>
         <id>https://bloop.be/how-to-erase-aironet-conf.html</id>
 
-        <updated>2022-01-27T10:42:53+01:00</updated>
+        <updated>2022-01-27T11:52:59+01:00</updated>
             <summary>
                 <![CDATA[
-                    commande: wr erase debug capwap console cli erase /all nvram: undebug all reload
+                    commande: wr erase debug capwap console cli erase /all nvram: undebug all reload to test: wr default reload
                 ]]>
             </summary>
         <content type="html">
@@ -51,6 +51,10 @@
 <p>erase /all nvram:</p>
 <p> </p>
 <p>undebug all</p>
+<p>reload</p>
+<p> </p>
+<p>to test:</p>
+<p>wr default</p>
 <p>reload</p>
             ]]>
         </content>

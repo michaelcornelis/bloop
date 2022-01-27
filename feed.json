@@ -27,15 +27,15 @@
             "id": "https://bloop.be/how-to-erase-aironet-conf.html",
             "url": "https://bloop.be/how-to-erase-aironet-conf.html",
             "title": "how to erase aironet conf",
-            "summary": "commande: wr erase debug capwap console cli erase /all nvram: undebug all reload",
-            "content_html": "<p>commande:</p>\n<p>wr erase</p>\n<p>debug capwap console cli</p>\n<p>erase /all nvram:</p>\n<p> </p>\n<p>undebug all</p>\n<p>reload</p>",
+            "summary": "commande: wr erase debug capwap console cli erase /all nvram: undebug all reload to test: wr default reload",
+            "content_html": "<p>commande:</p>\n<p>wr erase</p>\n<p>debug capwap console cli</p>\n<p>erase /all nvram:</p>\n<p> </p>\n<p>undebug all</p>\n<p>reload</p>\n<p> </p>\n<p>to test:</p>\n<p>wr default</p>\n<p>reload</p>",
             "author": {
                 "name": "Mike"
             },
             "tags": [
             ],
             "date_published": "2022-01-26T15:25:42+01:00",
-            "date_modified": "2022-01-27T10:42:53+01:00"
+            "date_modified": "2022-01-27T11:52:59+01:00"
         },
         {
             "id": "https://bloop.be/reset-password.html",
